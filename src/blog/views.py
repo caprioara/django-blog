@@ -8,17 +8,17 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import BlogPost
 from .forms import BlogPostForm, BlogPostModelForm
 
-def blog_post_detail_page(request, slug):
-	print("Django says", request.method, request.path, request.user)
-	# queryset = BlogPost.objects.filter(slug=slug)
-	# if queryset.count() == 0:
-	# 	raise Http404
-	# obj = queryset.first()
-	# obj = BlogPost.objects.get(id=post_id)
-	obj = get_object_or_404(BlogPost, slug=slug)
-	template_name = "blog_post_detail.html"
-	context = {"objects": obj}
-	return render(request, template_name, context)
+# def blog_post_detail_page(request, slug):
+# 	print("Django says", request.method, request.path, request.user)
+# 	# queryset = BlogPost.objects.filter(slug=slug)
+# 	# if queryset.count() == 0:
+# 	# 	raise Http404
+# 	# obj = queryset.first()
+# 	# obj = BlogPost.objects.get(id=post_id)
+# 	obj = get_object_or_404(BlogPost, slug=slug)
+# 	template_name = "blog_post_detail.html"
+# 	context = {"objects": obj}
+# 	return render(request, template_name, context)
 
 # CRUD
 
@@ -27,6 +27,9 @@ def blog_post_list_view(request):
 	# cloud be search
 	# now = timezone.now()
 	qs = BlogPost.objects.published() # queryset -> list of python objects
+	if request.user.is_authenticated:
+		my_qs = BlogPost.objects.filter(user=request.user)
+		qs = (qs | my_qs).distinct()
 	# qs = BlogPost.objects.filter(publish_date__lte=now)
 	# qs = BlogPost.objects.filter(title__icontains='vs') # Filtrare pentru titluri care contin "vs"
 	template_name = "blog/list.html"
