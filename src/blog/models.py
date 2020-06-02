@@ -10,6 +10,12 @@ class BlogPost(models.Model):
 	title = models.CharField(max_length=150)
 	slug = models.SlugField(unique=True)
 	content = models.TextField(null=True, blank=True)
+	publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)
+	timestamp = models.DateTimeField(auto_now=True)
+	updated = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+	class Meta:
+		ordering = ['-publish_date', '-updated', '-timestamp']
 
 	def __str__(self):
 		return self.title
@@ -19,7 +25,7 @@ class BlogPost(models.Model):
 		return f"/blog/{self.slug}"
 
 	def get_edit_url(self):
-		return f"/blog/{self.slug}/edit"
+		return f"/blog/{self.slug()}/edit"
 
 	def get_delete_url(self):
-		return f"{self.get_absolute_url}/delete"
+		return f"{self.get_absolute_url()}/delete"

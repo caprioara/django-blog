@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Blog",
+				"BlogPostForm"
+			],
+			[
+				"Contac",
+				"ContactForm"
+			],
+			[
+				"for",
+				"forms"
+			],
+			[
+				"obj",
+				"objects"
+			],
+			[
 				"padding",
 				"padding-bottom\tproperty"
 			],
@@ -76,10 +92,6 @@
 				"lista2"
 			],
 			[
-				"for",
-				"for_it"
-			],
-			[
 				"tit",
 				"title_deaths"
 			],
@@ -127,6 +139,50 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/blog/templates/blog/list.html",
+			"settings":
+			{
+				"buffer_size": 303,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/blog/templates/blog/list-inline.html",
+			"settings":
+			{
+				"buffer_size": 445,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/blog/templates/blog/detail.html",
+			"settings":
+			{
+				"buffer_size": 388,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/blog/forms.py",
+			"settings":
+			{
+				"buffer_size": 704,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/templates/home.html",
+			"settings":
+			{
+				"buffer_size": 302,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -140,16 +196,16 @@
 		"selected_items":
 		[
 			[
+				"ay",
+				"ayu: Activate theme"
+			],
+			[
 				"activa",
 				"Material Theme: Activate theme"
 			],
 			[
 				"me",
 				"Material Theme: Extras"
-			],
-			[
-				"ay",
-				"ayu: Activate theme"
 			],
 			[
 				"agi",
@@ -241,15 +297,46 @@
 	"expanded_folders":
 	[
 		"/Users/caprioara/Projects/blog-django",
-		"/Users/caprioara/Projects/blog-django/src"
+		"/Users/caprioara/Projects/blog-django/src",
+		"/Users/caprioara/Projects/blog-django/src/blog",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog",
+		"/Users/caprioara/Projects/blog-django/src/blog_django",
+		"/Users/caprioara/Projects/blog-django/src/templates"
 	],
 	"file_history":
 	[
+		"/Users/caprioara/Projects/blog-django/src/templates/base.html",
+		"/Users/caprioara/Projects/blog-django/src/blog_django/views.py",
+		"/Users/caprioara/Projects/blog-django/src/templates/form.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog/detail.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/navbar.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog/form.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/urls.py",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog/delete.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog/list.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/views.py",
+		"/Users/caprioara/Projects/blog-django/src/blog/models.py",
+		"/Users/caprioara/Projects/blog-django/src/blog/forms.py",
+		"/Users/caprioara/Projects/blog-django/src/templates/js.html",
+		"/Users/caprioara/Projects/blog-django/src/blog_django/forms.py",
+		"/Users/caprioara/Projects/blog-django/src/blog_django/urls.py",
+		"/Users/caprioara/Projects/blog-django/src/blog/templates/blog/create.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/blog_post_delete.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/blog_post_update.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/blog_post_detail.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/migrations/urls.py",
+		"/Users/caprioara/Projects/blog-django/src/templates/blog_post_create.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/blog_post_list.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/about.html",
+		"/Users/caprioara/Projects/blog-django/src/templates/home.html",
+		"/Users/caprioara/Projects/blog-django/src/blog/admin.py",
+		"/Users/caprioara/Projects/blog-django/src/blog_django/settings.py",
+		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/templates/products/home.html",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/templates/products/search.html",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/urls.py",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/producthunt/urls.py",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/admin.py",
-		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/templates/products/home.html",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/templates/products/detail.html",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/producthunt/templates/base.html",
 		"/Users/caprioara/Projects/producthunt-udemy/producthunt-project/products/views.py",
@@ -346,37 +433,11 @@
 		"/Users/caprioara/Documents/Python/Json/learn JSON/demo1.py",
 		"/Users/caprioara/Documents/Python/Json/learn JSON/new_json.json",
 		"/Users/caprioara/Documents/Python/Json/learn JSON/new_json2.json",
-		"/Users/caprioara/Documents/Python/Json/learn JSON/json_demo.json",
-		"/Users/caprioara/Documents/Python/Json/learn JSON/user.json",
-		"/Users/caprioara/Documents/Python/Json/test.text",
-		"/Users/caprioara/Documents/Python/Json/prosses.py",
-		"/Users/caprioara/repos/section5_code/.gitignore",
-		"/Users/caprioara/repos/section5_code/.gitignore.exclude",
-		"/Users/caprioara/repos/section5_code/req/req.text",
-		"/Users/caprioara/repos/section5_code/req/Django==3.0.4",
-		"/Users/caprioara/repos/section5_udemy/.gitignore",
-		"/Users/caprioara/repos/section5_udemy/main_code/main/.gitignore",
-		"/Users/caprioara/Documents/Python/Udemy/Section7/ex1/pornhub.text",
-		"/Users/caprioara/repos/vcount-casa-rusu/implementare/data/input/input.json",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex4/html.html",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/req_post.py",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/fb_text.text",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/comic.png",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/main.py",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/html.html",
-		"/Users/caprioara/Documents/Python/Udemy/Section6/ex3/myfile.html",
-		"/Users/caprioara/Documents/Python/Udemy/Section5/main.py",
-		"/Users/caprioara/Documents/Python/Udemy/Section5/untitled",
-		"/Users/caprioara/repos/vcount-casa-rusu/implementare/manage.py",
-		"/Users/caprioara/repos/vcount-casa-rusu/implementare/config.json",
-		"/Users/caprioara/repos/interfata_web_casarusu/readme.md",
-		"/Users/caprioara/Documents/Testare/vcount-casa-rusu-develop/implementare/config.json",
-		"/Users/caprioara/Documents/Testare/vcount-casa-rusu-develop/implementare/data/db/failed_requests.json",
-		"/Users/caprioara/Documents/Testare/vcount-casa-rusu-develop/implementare/logs/status.log"
+		"/Users/caprioara/Documents/Python/Json/learn JSON/json_demo.json"
 	],
 	"find":
 	{
-		"height": 70.0
+		"height": 54.0
 	},
 	"find_in_files":
 	{
@@ -390,6 +451,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title_iexact"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -407,8 +469,150 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/blog/templates/blog/list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								67,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/blog/templates/blog/list-inline.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/blog/templates/blog/detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								339,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/blog/forms.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/templates/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
