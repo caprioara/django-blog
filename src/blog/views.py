@@ -41,7 +41,7 @@ def blog_post_list_view(request):
 def blog_post_create_view(request):
 	# create objects
 	# ? use a form
-	form = BlogPostModelForm(request.POST or None)
+	form = BlogPostModelForm(request.POST or None, request.FILES or None)
 	# Not authenticated user
 
 	# if not request.user.is_authenticated:

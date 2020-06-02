@@ -5,6 +5,8 @@ from django.conf import settings
 
 from blog.views import blog_post_create_view
 
+from searches.views import search_view
+
 from .views import (
 	home_page,
 	contact_page,
@@ -17,6 +19,7 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     # re_path(r'^blog/(?P<post_id>\d+)/$', blog_post_detail_page),
 
+    path('search/', search_view),
 
 
     path('', home_page),
