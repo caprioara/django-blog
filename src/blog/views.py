@@ -3,6 +3,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 
+# from django.utils import timezone
+
 from .models import BlogPost
 from .forms import BlogPostForm, BlogPostModelForm
 
@@ -23,7 +25,9 @@ def blog_post_detail_page(request, slug):
 def blog_post_list_view(request):
 	# list out objects
 	# cloud be search
-	qs = BlogPost.objects.all() # queryset -> list of python objects
+	# now = timezone.now()
+	qs = BlogPost.objects.published() # queryset -> list of python objects
+	# qs = BlogPost.objects.filter(publish_date__lte=now)
 	# qs = BlogPost.objects.filter(title__icontains='vs') # Filtrare pentru titluri care contin "vs"
 	template_name = "blog/list.html"
 	context = {'object_list': qs }
