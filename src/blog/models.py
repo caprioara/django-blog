@@ -21,6 +21,7 @@ class BlogPost(models.Model):
 	# id = midels.IntegerField() # pk
 	user = models.ForeignKey(User, default=1, null=True, on_delete=models.SET_NULL)
 	title = models.CharField(max_length=150)
+	image = models.FileField(upload_to='image/', blank=True, null=True)
 	slug = models.SlugField(unique=True)
 	content = models.TextField(null=True, blank=True)
 	publish_date = models.DateTimeField(auto_now=False, auto_now_add=False, null=True, blank=True)

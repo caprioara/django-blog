@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path, re_path, include
 
+from django.conf import settings
+
 from blog.views import blog_post_create_view
 
 from .views import (
@@ -15,6 +17,8 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     # re_path(r'^blog/(?P<post_id>\d+)/$', blog_post_detail_page),
 
+
+
     path('', home_page),
     re_path(r'about?/$', about_page),
     path('contact/', contact_page),
@@ -22,3 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
+
+if settings.DEBUG:
+
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
