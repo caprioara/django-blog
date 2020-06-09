@@ -2,6 +2,9 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 from django.db.models import Q
+from comments.models import Comment
+
+from django.contrib.contenttypes.models import ContentType
 
 User = settings.AUTH_USER_MODEL
 
@@ -50,6 +53,7 @@ class BlogPost(models.Model):
 
 	class Meta:
 		ordering = ['-publish_date', '-updated', '-timestamp']
+		verbose_name = "blogpost"
 
 	def __str__(self):
 		return self.title
@@ -63,3 +67,18 @@ class BlogPost(models.Model):
 
 	def get_delete_url(self):
 		return f"{self.get_absolute_url}/delete"
+
+	@property
+	def comments(self):
+		instance = self
+		qs = Comment.objects.filter_by_instance(instance)
+		return qs
+
+	@property
+	def get_content_type(self):
+		instance = self
+		content_type = ContentType.objects.get_for_model(instance.__class__)
+		return content_type
+
+
+	

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="row">
+<div class="row" style="text-align: justify;">
 	{% include "blog/list-inline.html" with blog_post=object detail=True%}
 
 	{% include "blog/comments.html" with blog_post=object detail=True%}

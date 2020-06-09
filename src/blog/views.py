@@ -8,6 +8,7 @@ from django.contrib.contenttypes.models import ContentType
 from comments.models import Comment
 from .models import BlogPost
 from .forms import BlogPostForm, BlogPostModelForm
+from comments.forms import CommentForm
 
 # def blog_post_detail_page(request, slug):
 # 	print("Django says", request.method, request.path, request.user)
@@ -66,10 +67,25 @@ def blog_post_detail_view(request, slug):
 	# 1 object -> detail view
 	obj = get_object_or_404(BlogPost, slug = slug)
 	template_name = "blog/detail.html"
-	content_type = ContentType.objects.get_for_model(BlogPost)
-	obj_id = obj.id
-	comments = Comment.objects.filter(content_type = content_type, object_id=obj_id)
-	context = {'object': obj, "comments":comments}
+	# content_type = ContentType.objects.get_for_model(BlogPost)
+	# obj_id = obj.id
+	# comments = Comment.objects.filter(content_type = content_type, object_id=obj_id)
+
+	# comments = Comment.objects.filter_by_instance(obj)
+	comments = obj.comments
+	initial_data = {"content_type":obj.get_content_type, "object_id":obj.id}
+	form = CommentForm(request.POST or None, initial=initial_data)
+	if form.is_valid():
+		c_type = form.cleaned_data.get("content_type")
+		content_type = ContentType.objects.get(model=c_type)
+		obj_id = form.cleaned_data.get("object_id")
+		content_data = form.cleaned_data.get("content")
+		new_comment, created = Comment.objects.get_or_create(user= request.user, content_type= content_type, object_id = obj_id, content = content_data)
+
+		if created:
+			print("yeah it worked")
+
+	context = {'object': obj, "comments":comments, 'comment_form':form}
 	return render(request, template_name, context)
 
 @staff_member_required
