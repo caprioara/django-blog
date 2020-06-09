@@ -1,0 +1,15 @@
+<div class="col-12 col-md-8 mb-2 mx-auto">
+	<div class="card {% if not blog_post.publish_date %} border border-warning text-dark {% endif %}">
+		<div class="card-body">
+			<p class='lead'>Comments</p>
+			{% for comment in comments %}
+				<div class="">
+					{{ comment.content }}
+					<br>
+					<small class="font-italic">posted by {{ comment.user }} | {{ comment.timestamp|timesince }} ago</small>
+					<hr>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

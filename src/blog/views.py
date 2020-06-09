@@ -2,9 +2,10 @@ from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.contenttypes.models import ContentType
 
 # from django.utils import timezone
-
+from comments.models import Comment
 from .models import BlogPost
 from .forms import BlogPostForm, BlogPostModelForm
 
@@ -65,7 +66,10 @@ def blog_post_detail_view(request, slug):
 	# 1 object -> detail view
 	obj = get_object_or_404(BlogPost, slug = slug)
 	template_name = "blog/detail.html"
-	context = {'object': obj}
+	content_type = ContentType.objects.get_for_model(BlogPost)
+	obj_id = obj.id
+	comments = Comment.objects.filter(content_type = content_type, object_id=obj_id)
+	context = {'object': obj, "comments":comments}
 	return render(request, template_name, context)
 
 @staff_member_required
@@ -74,7 +78,7 @@ def blog_post_update_view(request, slug):
 	form = BlogPostModelForm(request.POST or None, instance=obj)
 	if form.is_valid():
 		form.save()
-
+	
 	# Nu este valid
 	template_name = "form.html"
 	context = {"title": f"Update {obj.title}", "form":form}
